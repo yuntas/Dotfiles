@@ -6,10 +6,13 @@ prompt adam1
 # Use modern completion system
 autoload -Uz compinit && compinit -u
 
+autoload colors && colors
 #####setopt#####
 setopt histignorealldups sharehistory
 setopt magic_equal_subst
 setopt auto_param_slash
+setopt prompt_subst
+
 #####history#####
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -23,22 +26,23 @@ zstyle ':completion:*' list-colors 'di=36;49' 'ln=35;49' 'so=32;49' 'pi=33;47' '
 
 ######ls util#####
 setopt auto_cd
-function chpwd() { ls }
+function chpwd() { ls -a --color=auto}
 
 #####zplug#####
-# install zplug
-if [[ ! -d ~/.zplug ]];then
-  git clone https://github.com/zplug/zplug ~/.zplug
+# Zplug init
+if [[ ! -d ~/.zplug ]]; then
+    git clone https://github.com/zplug/zplug ~/.zplug
+    source ~/.zplug/init.zsh && zplug update --self
 fi
-
 source ~/.zplug/init.zsh
 
 # Additional completion definitions for Zsh
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-
-
+zplug "b4b4r07/enhancd", use:init.sh
+zplug check || zplug install
+zplug load --verbose
 #####aliases#####
 alias ls='ls -a --color=always'
 alias vi='nvim'
