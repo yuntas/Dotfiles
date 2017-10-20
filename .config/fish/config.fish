@@ -12,14 +12,22 @@ balias upg 'sudo apt upgrade'
 balias rm 'rm -i'
 
 # conda
-# source /home/yumin/.pyenv/versions/anaconda3-4.3.1/etc/fish/conf.d/conda.fish
+source ~/.pyenv/versions/anaconda3-4.4.0/etc/fish/conf.d/conda.fish
 
 # pyenv
 set -x PATH $HOME/.pyenv/shims $PATH
+set -x PATH $HOME/.pyenv/bin/ $PATH
+source ~/.pyenv/completions/pyenv.fish
 
 # theme
-# set fish_theme bobthefish
+set fish_theme bobthefish
 
 # encoding
 set -x LANG ja_JP.UTF-8
+
+# cd->ls
+function cd
+  builtin cd $argv
+    ls -a
+end
 
