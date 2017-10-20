@@ -1,0 +1,16 @@
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo        = 'Shougo/neomru.vim'
+os_source   = ['unite.vim']
+
+# python setting
+
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+on_ft = 'python'
+
+[[plugins]]
+repo = "davidhalter/jedi-vim"
+on_ft = 'python'
