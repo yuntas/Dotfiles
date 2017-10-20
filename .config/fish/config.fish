@@ -20,7 +20,7 @@ set -x PATH $HOME/.pyenv/bin/ $PATH
 source ~/.pyenv/completions/pyenv.fish
 
 # theme
-set fish_theme bobthefish
+#set fish_theme bobthefish
 
 # encoding
 set -x LANG ja_JP.UTF-8

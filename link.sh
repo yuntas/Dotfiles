@@ -10,12 +10,14 @@ echo "link home dir dotfiles"
 
 cd ${dot_dir}
 
-for f in .??*
-do
+for f in .??*; do
 	#無視するファイルやディレクトリ
 	[ "$f" = ".git" ] && continue
 	[ "$f" = ".config" ] && continue
-	ln -snfv ${dot_dir}/${f} ${HOME}/${f}
+
+	#ln -snfv ${dot_dir}/${f} ${HOME}/${f}
+	ln -snfv ${dot_dir}/"$f" ${HOME}/
+
 done
 
 echo "link .config dir dotfiles"
@@ -23,7 +25,6 @@ echo "link .config dir dotfiles"
 cd ${dot_dir}/${conf_dir}
 
 for file in `\find . -maxdepth 8 -type f`; do
-    echo ${file:2}
 	ln -snfv ${dot_dir}/${conf_dir}/${file:2} ${HOME}/${conf_dir}/${file:2}
 done
 
