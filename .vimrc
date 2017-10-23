@@ -111,3 +111,14 @@ colorscheme molokai
 let g:molokai_original = 1
 set t_Co=256
 set laststatus=2
+
+
+python << EOF
+import os
+import sys
+
+home = os.path.expanduser('~')
+path = home + "/.pyenv/versions/anaconda3-4.4.0/envs/djan/lib/python3.6/site-packages"
+if not path in sys.path:
+    sys.path.insert(0, path)
+EOF
