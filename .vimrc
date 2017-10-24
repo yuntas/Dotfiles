@@ -120,7 +120,7 @@ home = os.path.expanduser('~')
 path = home + "/.pyenv/versions/anaconda3-4.4.0/envs/"
 os.chdir(path)
 for i in os.listdir(path):
-    path2 = path + i + '/'
+    path2 = path + i + '/lib/python3.6/site-packages'
     if not path2 in sys.path:
         sys.path.insert(0, path2)
 EOF
