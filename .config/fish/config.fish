@@ -2,7 +2,8 @@
 fish_vi_key_bindings 
 
 # balias
-balias vi '/usr/local/bin/vim'
+balias vi '/bin/vi'
+#balias vi '/usr/local/bin/vim'
 balias ls 'ls -A --color=auto'
 balias ll 'ls -la --color=auto'
 balias grep 'grep --color'
@@ -12,12 +13,12 @@ balias upg 'sudo apt upgrade'
 balias rm 'rm -i'
 
 # conda
-source ~/.pyenv/versions/anaconda3-4.4.0/etc/fish/conf.d/conda.fish
+#source ~/.pyenv/versions/anaconda3-4.4.0/etc/fish/conf.d/conda.fish
 
 # pyenv
-set -x PATH $HOME/.pyenv/shims $PATH
-set -x PATH $HOME/.pyenv/bin/ $PATH
-source ~/.pyenv/completions/pyenv.fish
+#set -x PATH $HOME/.pyenv/shims $PATH
+#set -x PATH $HOME/.pyenv/bin/ $PATH
+#source ~/.pyenv/completions/pyenv.fish
 
 # theme
 #set fish_theme bobthefish
