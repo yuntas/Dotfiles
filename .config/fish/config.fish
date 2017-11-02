@@ -8,23 +8,24 @@ balias ls 'ls -A --color=auto'
 balias ll 'ls -la --color=auto'
 balias grep 'grep --color'
 balias df 'df -h'
-balias upd 'sudo apt update'
-balias upg 'sudo apt upgrade'
+balias upd 'sudo yum update'
+balias upg 'sudo yum upgrade'
 balias rm 'rm -i'
+balias yi 'sudo yum install'
 
 # conda
-#source ~/.pyenv/versions/anaconda3-4.4.0/etc/fish/conf.d/conda.fish
+source ~/.pyenv/versions/miniconda3-latest/etc/fish/conf.d/conda.fish
 
 # pyenv
-#set -x PATH $HOME/.pyenv/shims $PATH
-#set -x PATH $HOME/.pyenv/bin/ $PATH
-#source ~/.pyenv/completions/pyenv.fish
+set -x PATH $HOME/.pyenv/shims $PATH
+set -x PATH $HOME/.pyenv/bin/ $PATH
+source ~/.pyenv/completions/pyenv.fish
 
 # theme
 #set fish_theme bobthefish
 
 # encoding
-set -x LANG ja_JP.UTF-8
+set -x LANG en_US.UTF-8
 
 # cd->ls
 function cd
