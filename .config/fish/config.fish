@@ -2,7 +2,7 @@
 fish_vi_key_bindings 
 
 # balias
-balias vi '/bin/vi'
+balias vi '/usr/local/bin/vim'
 #balias vi '/usr/local/bin/vim'
 balias ls 'ls -A --color=auto'
 balias ll 'ls -la --color=auto'
@@ -25,6 +25,11 @@ source ~/.pyenv/versions/miniconda3-latest/etc/fish/conf.d/conda.fish
 set -x PATH $HOME/.pyenv/shims $PATH
 set -x PATH $HOME/.pyenv/bin/ $PATH
 source ~/.pyenv/completions/pyenv.fish
+
+# rbenv
+set -x PATH $HOME/.rbenv/bin/ $PATH
+source ~/.rbenv/completions/rbenv.fish
+rbenv init - | source
 
 # theme
 set fish_theme beloglazov
