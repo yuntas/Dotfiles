@@ -1,0 +1,3 @@
+/home/yuko/.pyenv/versions/anaconda3-4.4.0/envs/jupy
+/home/yuko/.pyenv/versions/anaconda3-4.4.0/envs/djan
+/home/yuko/.pyenv/versions/anaconda3-4.4.0/envs/sphi
