@@ -30,15 +30,22 @@ dependencies:
 - zlib=1.2.11=0
 - pip:
   - blockdiag==1.5.3
-  - commonmark==0.5.4
+  - chardet==3.0.4
+  - commonmark==0.7.4
   - funcparserlib==0.3.6
+  - future==0.16.0
+  - idna==2.6
   - nwdiag==1.0.4
   - olefile==0.44
+  - packaging==16.8
   - pillow==4.3.0
+  - pip-review==1.0
+  - pyparsing==2.2.0
   - recommonmark==0.4.0
   - sphinx-rtd-theme==0.2.4
   - sphinxcontrib-blockdiag==1.5.5
   - sphinxcontrib-nwdiag==0.9.5
+  - urllib3==1.22
   - webcolors==1.7
 prefix: /home/yuko/.pyenv/versions/anaconda3-4.4.0/envs/sphi
 
